@@ -4,12 +4,12 @@ import { AuthContext } from "../provider/AuthProvider";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from 'react-icons/fa6';
 
-import { sendPasswordResetEmail } from "firebase/auth";
+// import { sendPasswordResetEmail } from "firebase/auth";
 
 import { toast } from "react-toastify";
 
 import GoogoleLog from "./GoogoleLog";
-import { auth } from "../firebase/firebase.init";
+// import { auth } from "../firebase/firebase.init";
 
 const LogIn = () => {
 
