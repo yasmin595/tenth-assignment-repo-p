@@ -9,6 +9,7 @@ import PostedTask from '../components/PostedTask';
 import AuthLayout from '../layout/AuthLayout';
 import LogIn from '../pages/LogIn';
 import SignUp from '../pages/SignUp';
+import PrivateRoute from '../provider/PrivateRoute';
 
 
 
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
       },
        {
 path:"add-task",
-Component:AddTask,
+element:<PrivateRoute>
+  <AddTask></AddTask>
+</PrivateRoute>,
 
       },
     
