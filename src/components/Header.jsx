@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
+import { useState } from 'react';
 
 const Header = () => {
-
+const { user, logOut } = use(AuthContext);
+const [show, setShow] = useState(false);
+const handleLogOut = () => {
+    // console.log("user trying to LogOut");
+    logOut()
+      .then(() => {
+        toast.success("You Logged Out successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
     return (
         <div>
@@ -37,8 +51,39 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end gap-2">
-    <Link to='/auth/login' className="btn">Log In</Link>
-    <Link to="/auth/sign-up" className="btn">Sign Up</Link>
+        <img
+          className="w-12 rounded-full"
+          src={`${user && user?.photoURL}`}
+          alt=''
+          onClick={()=>setShow(!show)}
+        />
+
+        {
+          show && (
+
+            <div>
+              <p>{user.displayName}</p>
+         
+            <p>{user.email}</p>
+
+            <button onClick={handleLogOut} className='btn' >Log Out</button>
+            </div>
+          )
+        }
+      {user ? (
+       ''
+        ) : (
+          <Link to="/auth/login" className="btn  btn-secondary btn-outline px-4 ">
+            Login
+          </Link>
+        )}
+   {
+    user?(
+      ''
+    ):(
+       <Link to="/auth/sign-up" className="btn">Sign Up</Link>
+    )
+   }
   </div>
 </div>
         </div>

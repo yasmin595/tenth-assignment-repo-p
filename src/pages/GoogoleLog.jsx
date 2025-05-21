@@ -1,0 +1,33 @@
+import React from 'react';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import  { useState } from 'react';
+
+import { FcGoogle } from "react-icons/fc";
+import { toast } from 'react-toastify';
+import { auth } from '../firebase/firebase.init';
+const GoogoleLog = () => {
+    const [user, setUser]= useState(null);
+    const provider = new GoogleAuthProvider
+const handleGoogleSign = ()=>{
+    // console.log("google sign in is clicked");
+    signInWithPopup(auth, provider)
+    .then(result => {
+    //    console.log(result.user);
+       setUser(result.user)
+    })
+    .catch(error =>{
+        console.log(error)
+    })
+
+toast.success("You Successfully log in with your google account")
+}
+    return (
+        <div>
+             <button onClick={handleGoogleSign} className="btn btn-secondary btn-outline w-full">
+                      <FcGoogle size={24} /> Login with Google
+                    </button>
+        </div>
+    );
+};
+
+export default GoogoleLog;
