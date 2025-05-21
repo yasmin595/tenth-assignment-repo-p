@@ -11,6 +11,7 @@ import LogIn from '../pages/LogIn';
 import SignUp from '../pages/SignUp';
 import PrivateRoute from '../provider/PrivateRoute';
 import Loading from '../pages/Loading';
+import Details from '../pages/details';
 
 
 
@@ -44,6 +45,19 @@ element:<PrivateRoute>
             hydrateFallbackElement:<Loading></Loading>,
 
       },
+
+      {
+path:"details/:_id",
+loader: () => fetch("http://localhost:3000/tasks"),
+element:<PrivateRoute>
+  <Details>
+</Details> 
+</PrivateRoute> ,
+
+      hydrateFallbackElement:<Loading></Loading>,
+
+      },
+
       {
         path:"posted-task",
         Component:PostedTask,
