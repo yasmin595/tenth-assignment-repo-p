@@ -10,6 +10,7 @@ import AuthLayout from '../layout/AuthLayout';
 import LogIn from '../pages/LogIn';
 import SignUp from '../pages/SignUp';
 import PrivateRoute from '../provider/PrivateRoute';
+import Loading from '../pages/Loading';
 
 
 
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
       {
 
         index:true,
+         loader: () => fetch('http://localhost:3000/tasks'),
         Component:Home,
+        hydrateFallbackElement:<Loading></Loading>,
       },
        {
 path:"add-task",
@@ -36,7 +39,9 @@ element:<PrivateRoute>
     
       {
           path:"browse-task",
+             loader: () => fetch('http://localhost:3000/tasks'),
           Component:BrowseTask,
+            hydrateFallbackElement:<Loading></Loading>,
 
       },
       {

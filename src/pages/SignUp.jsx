@@ -121,7 +121,7 @@ const SignUp = () => {
    
 
  />
- <button onClick={()=>{setShowPassword(!showPassword)}}
+ <button type="button" onClick={()=>{setShowPassword(!showPassword)}}
  className='btn btn-xs absolute ml-20'>{
 
    showPassword ? <FaEyeSlash></FaEyeSlash>: <FaEye> </FaEye>

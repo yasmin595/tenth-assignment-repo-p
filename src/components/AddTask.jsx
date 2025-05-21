@@ -23,18 +23,18 @@ const AddTask = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                // if(data.insertedId){
-                //     console.log('added successfully.')
+                if(data.insertedId){
+                    console.log('added successfully.')
 
-                //     Swal.fire({
-                //         title: "Task added successfully!",
-                //         icon: "success",
-                //         draggable: true
-                //       });
+                    Swal.fire({
+                        title: "Task added successfully!",
+                        icon: "success",
+                        draggable: true
+                      });
 
-                //     //   form.reset()
+                    //   form.reset()
                
-                // }
+                }
             })
     }
 
