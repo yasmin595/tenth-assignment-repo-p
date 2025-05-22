@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router';
 import TaskCard from './TaskCard';
 import Instra from './Instra';
+import Question from './Question';
 
 const Home = () => {
 
@@ -16,6 +17,9 @@ tasks.map(task => <TaskCard key={task._id} task={task}></TaskCard>)
            }
         </div>
         <div> <Instra></Instra></div>
+        <div>
+         <Question></Question>
+        </div>
  </div>
     );
 };
