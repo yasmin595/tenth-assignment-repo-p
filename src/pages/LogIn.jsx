@@ -106,7 +106,7 @@ const LogIn = () => {
            <GoogoleLog></GoogoleLog>
             <p className="font-semibold text-center pt-5">
               Don't Have An Account ?{" "}
-              <Link className="text-secondary" to="/auth/register">
+              <Link  to = "/auth/sign-up" className="text-secondary" >
                 Register
               </Link>
             </p>

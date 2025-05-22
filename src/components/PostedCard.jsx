@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
-const PostedCard = ({task, table, setTable}) => {
+const PostedCard = ({task, emailTask, setEmailTask}) => {
     const {title, _id,  category,  deadline, budget  } = task;
   const handleDelete = (_id) => {
         console.log(_id);
@@ -32,9 +32,9 @@ const PostedCard = ({task, table, setTable}) => {
                                 icon: "success"
                             });
 
-                            // remove the coffee from the state
-                            const remainingTasks = table.filter(tas => tas._id !== _id);
-                            setTable(remainingTasks);
+                            // remove the task from the state
+                            const remainingTasks = emailTask.filter(ta => ta._id !== _id);
+                            setEmailTask(remainingTasks);
                         }
                     })
 

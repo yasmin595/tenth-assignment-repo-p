@@ -21,9 +21,9 @@ const handleLogOut = () => {
   };
 
     return (
-        <div>
+        <div className=' '>
          
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className=" px-2 lg:px-4 navbar bg-base-100 mx-auto shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@ const handleLogOut = () => {
         <li><NavLink to={`/posted-task/${user?.email}`}>My Posted Task</NavLink></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">Freelancer Market Place</a>
+    <a className=" text-secondary font-bold text-2xl">Freelance Task <br /> Marketplace</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -69,7 +69,7 @@ const handleLogOut = () => {
          
             <p>{user?.email}</p>
 
-            <button onClick={handleLogOut} className='btn' >Log Out</button>
+            <button  onClick={handleLogOut} className='btn btn-secondary btn-outline' >Log Out</button>
             </div>
           )
         }
@@ -84,7 +84,7 @@ const handleLogOut = () => {
     user?(
       ''
     ):(
-       <Link to="/auth/sign-up" className="btn">Sign Up</Link>
+       <Link to="/auth/sign-up" className="btn btn-secondary btn-outline">Sign Up</Link>
     )
    }
   </div>

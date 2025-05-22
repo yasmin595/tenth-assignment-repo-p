@@ -70,7 +70,7 @@ element:<PrivateRoute>
       },
       {
         path:"updated-task/:id",
-        loader:({params}) => fetch(`http://localhost:3000/task/${params._id}`),
+        loader:({params}) => fetch(`http://localhost:3000/task/${params.id}`),
         
         element:<PrivateRoute>
           <UpdateTask></UpdateTask>

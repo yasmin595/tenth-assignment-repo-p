@@ -15,13 +15,15 @@ const {title, category, description, deadline, budget ,  } = task
 //   },
 
     return (
-       <div className="card card-border bg-base-100 w-96">
+       <div className="card  bg-base-300 w-96">
   <div className="card-body">
-    <h2 className="card-title"> Task-Title: {title}</h2>
-    <p className='font-semibold'> Category: {category}</p>
+    <h2 className="card-title font-bold flex flex-col justify-center text-center"> Task-Title: {title}</h2>
+    <div className='flex flex-col justify-center text-center'>
+      <p className='font-semibold'> Category: {category}</p>
     <p className='font-semibold'> Budget: {budget}</p>
     <p className='font-semibold'> Deadline: {deadline}</p>
     <p>description : {description} </p>
+    </div>
    
   </div>
 </div>
