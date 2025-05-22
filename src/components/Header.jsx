@@ -35,7 +35,7 @@ const handleLogOut = () => {
       <NavLink to='/add-task'> Add Task</NavLink>
         </li>
         <li><NavLink to="/browse-task">Browse Task</NavLink></li>
-        <li><NavLink to="posted-task">My Posted Task</NavLink></li>
+        <li><NavLink to={`/posted-task/${user.email}`}>My Posted Task</NavLink></li>
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -47,7 +47,7 @@ const handleLogOut = () => {
      <NavLink to='/add-task'> Add Task</NavLink>
         </li>
         <li><NavLink to="/browse-task">Browse Task</NavLink></li>
-        <li><NavLink to="posted-task">My Posted Task</NavLink></li>
+        <li><NavLink to={`/posted-task/${user.email}`}>My Posted Task</NavLink></li>
     </ul>
   </div>
   <div className="navbar-end gap-2">

@@ -59,7 +59,7 @@ element:<PrivateRoute>
       },
 
       {
-        path:"posted-task",
+        path:"posted-task/:email",
         loader: ({params})=> fetch(`http://localhost:3000/tasks/${params.email}`),
      element:<PrivateRoute>
      <PostedTask></PostedTask>
