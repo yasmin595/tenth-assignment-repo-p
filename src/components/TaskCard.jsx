@@ -15,7 +15,8 @@ const {title, category, description, deadline, budget ,  } = task
 //   },
 
     return (
-       <div className="card  bg-base-300 w-96">
+       <div className="card  bg-base-300 w-11/12">
+     
   <div className="card-body">
     <h2 className="card-title font-bold flex flex-col justify-center text-center"> Task-Title: {title}</h2>
     <div className='flex flex-col justify-center text-center'>

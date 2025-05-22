@@ -9,10 +9,10 @@ const Footer = () => {
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center gap-2">
                             <Calendar className="h-6 w-6" />
-                            <span className="text-xl font-bold text-secondary">Event Explorer</span>
+                            <span className="text-xl font-bold text-secondary">Freelancer Market Place </span>
                         </Link>
                         <p className=" text-xs">
-                            Discover and explore local <br /> events happening in your area. Find concerts, workshops, exhibitions, and more.
+                            Discover and explore budget friendly <br /> skill happening in your wold. Find you work and more.
                         </p>
                     </div>
 

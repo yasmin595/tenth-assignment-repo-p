@@ -13,6 +13,7 @@ import PrivateRoute from '../provider/PrivateRoute';
 import Loading from '../pages/Loading';
 import Details from '../pages/details';
 import UpdateTask from '../components/UpdateTask';
+import ErrorPage from '../pages/ErrorPage';
 
 
 
@@ -76,8 +77,11 @@ element:<PrivateRoute>
           <UpdateTask></UpdateTask>
         </PrivateRoute>,
          hydrateFallbackElement:<Loading></Loading>,       
-      }
+      },
+       
+     
      ]
+     
   },
   {
 path:"/auth",
@@ -91,11 +95,16 @@ children:[
     {
         path:"/auth/sign-up",
         Component:SignUp,
-    }
+    },
 
 ]
 
-  }
+  },
+    {
+      path:'/*',
+      element:<ErrorPage></ErrorPage>
+
+        },
 ]);
     
 

@@ -17,7 +17,7 @@ const DetailsCard = ({cards}) => {
 //   },
 
     return (
-       <div className="card card-border bg-base-100 w-96">
+       <div className="card  bg-base-300 w-96">
   <div className="card-body">
     <h2 className="card-title"> Task-Title: {title}</h2>
     <p className='font-semibold'> Category: {category}</p>
@@ -27,7 +27,7 @@ const DetailsCard = ({cards}) => {
     <p className='font-semibold'> Email: {email}</p>
     <p>description : {description} </p>
    <div>
-    <button className='btn btn-primary'>Delete</button>
+    <button className='btn btn-primary'>Contact</button>
    </div>
   </div>
 </div>
