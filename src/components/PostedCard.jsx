@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
 const PostedCard = ({task, table, setTable}) => {
@@ -66,9 +67,9 @@ const PostedCard = ({task, table, setTable}) => {
                   <td>{deadline}</td>
                   <td>{budget}</td>
                     <td className="space-x-2 grid grid-cols-1 ">
-          <button className="btn btn-xs btn-primary my-1">Update</button>
-          <button onClick={()=> handleDelete(_id)} className="btn btn-xs btn-error my-1">Delete</button>
-          <button className="btn btn-xs btn-secondary">Bids</button>
+          <Link to={`/updated-task/${_id}`}><button className="btn btn-xs btn-primary my-1">Update</button></Link>
+          <button onClick={()=> handleDelete(_id)} className="btn btn-xs text-white bg-red-700 my-1">Delete</button>
+          <button className="btn btn-xs btn-primary">Bids</button>
         </td>
                 </tr>
               

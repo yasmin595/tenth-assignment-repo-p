@@ -12,6 +12,7 @@ import SignUp from '../pages/SignUp';
 import PrivateRoute from '../provider/PrivateRoute';
 import Loading from '../pages/Loading';
 import Details from '../pages/details';
+import UpdateTask from '../components/UpdateTask';
 
 
 
@@ -61,9 +62,20 @@ element:<PrivateRoute>
       {
         path:"posted-task/:email",
         loader: ({params})=> fetch(`http://localhost:3000/tasks/${params.email}`),
+        
      element:<PrivateRoute>
      <PostedTask></PostedTask>
-     </PrivateRoute>
+     </PrivateRoute>,
+       hydrateFallbackElement:<Loading></Loading>
+      },
+      {
+        path:"updated-task/:id",
+        loader:({params}) => fetch(`http://localhost:3000/task/${params._id}`),
+        
+        element:<PrivateRoute>
+          <UpdateTask></UpdateTask>
+        </PrivateRoute>,
+         hydrateFallbackElement:<Loading></Loading>,       
       }
      ]
   },
