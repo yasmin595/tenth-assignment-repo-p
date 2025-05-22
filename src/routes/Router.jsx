@@ -60,7 +60,10 @@ element:<PrivateRoute>
 
       {
         path:"posted-task",
-        Component:PostedTask,
+        loader: ({params})=> fetch(`http://localhost:3000/tasks/${params.email}`),
+     element:<PrivateRoute>
+     <PostedTask></PostedTask>
+     </PrivateRoute>
       }
      ]
   },
