@@ -12,6 +12,8 @@ const handleLogOut = () => {
     logOut()
       .then(() => {
         toast.success("You Logged Out successfully");
+        setShow('');
+        
       })
       .catch((error) => {
         console.log(error);
@@ -35,10 +37,10 @@ const handleLogOut = () => {
       <NavLink to='/add-task'> Add Task</NavLink>
         </li>
         <li><NavLink to="/browse-task">Browse Task</NavLink></li>
-        <li><NavLink to={`/posted-task/${user.email}`}>My Posted Task</NavLink></li>
+        <li><NavLink to={`/posted-task/${user?.email}`}>My Posted Task</NavLink></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">Freelancer Market Place</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -47,9 +49,10 @@ const handleLogOut = () => {
      <NavLink to='/add-task'> Add Task</NavLink>
         </li>
         <li><NavLink to="/browse-task">Browse Task</NavLink></li>
-        <li><NavLink to={`/posted-task/${user.email}`}>My Posted Task</NavLink></li>
+        <li><NavLink to={`/posted-task/${user?.email}`}>My Posted Task</NavLink></li>
     </ul>
   </div>
+   
   <div className="navbar-end gap-2">
         <img
           className="w-12 rounded-full"
@@ -62,9 +65,9 @@ const handleLogOut = () => {
           show && (
 
             <div>
-              <p>{user.displayName}</p>
+              <p>{user?.displayName}</p>
          
-            <p>{user.email}</p>
+            <p>{user?.email}</p>
 
             <button onClick={handleLogOut} className='btn' >Log Out</button>
             </div>

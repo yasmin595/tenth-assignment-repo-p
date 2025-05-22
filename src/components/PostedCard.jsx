@@ -1,7 +1,48 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
-const PostedCard = ({task}) => {
+const PostedCard = ({task, table, setTable}) => {
     const {title, _id,  category,  deadline, budget  } = task;
+  const handleDelete = (_id) => {
+        console.log(_id);
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            console.log(result.isConfirmed)
+            if (result.isConfirmed) {
+
+                // start deleting the coffee
+                fetch(`http://localhost:3000/task/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Task has been deleted.",
+                                icon: "success"
+                            });
+
+                            // remove the coffee from the state
+                            const remainingTasks = table.filter(tas => tas._id !== _id);
+                            setTable(remainingTasks);
+                        }
+                    })
+
+
+            }
+        });
+
+    }
+
     return (
         <div className='w-11/12 mx-auto'>
 
@@ -14,6 +55,7 @@ const PostedCard = ({task}) => {
                 <th>Category</th>
                 <th>Deadline</th>
                 <th>Budget</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -22,15 +64,18 @@ const PostedCard = ({task}) => {
                   <td>{title}</td>
                   <td>{category}</td>
                   <td>{deadline}</td>
-                  <td>${budget}</td>
+                  <td>{budget}</td>
+                    <td className="space-x-2 grid grid-cols-1 ">
+          <button className="btn btn-xs btn-primary my-1">Update</button>
+          <button onClick={()=> handleDelete(_id)} className="btn btn-xs btn-error my-1">Delete</button>
+          <button className="btn btn-xs btn-secondary">Bids</button>
+        </td>
                 </tr>
               
             </tbody>
           </table>
         </div>
 
-        <button className='btn btn-primary px-3 mx-3'>Delete </button>
-        <button className='btn btn-primary'>Update </button>
         </div>
     );
 };

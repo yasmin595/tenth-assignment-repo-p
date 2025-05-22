@@ -2,9 +2,7 @@ import React from 'react';
 
 const DetailsCard = ({cards}) => {
  const {title, _id, name, email,  category, description, deadline, budget ,  } = cards;
- const handleDelete = (_id)=>{
-console.log(_id);
- }
+ 
 
 
 //  {
@@ -29,7 +27,7 @@ console.log(_id);
     <p className='font-semibold'> Email: {email}</p>
     <p>description : {description} </p>
    <div>
-    <button onClick={ ()=> handleDelete(_id)} className='btn btn-primary'>Delete</button>
+    <button className='btn btn-primary'>Delete</button>
    </div>
   </div>
 </div>
