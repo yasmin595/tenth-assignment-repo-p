@@ -9,7 +9,7 @@ import image6 from '../assets/download (31).jpeg'
 
 const Instra = () => {
     return (
-        <div className='w-11/12 mx-auto my-16 '>
+        <div className='w-11/12 mx-auto my-16 bg-white'>
            <div className=' md:flex flex-col justify-center text-center  py-4'>  <p>Follow Us Now</p>
             <h1 className='font-bold text-secondary'>Follow on Instagram</h1></div>
 

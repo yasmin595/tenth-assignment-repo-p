@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const DetailsCard = ({cards}) => {
  const {title, _id, name, email,  category, description, deadline, budget ,  } = cards;
  
+  const [bidsCount, setBidsCount] = useState(0);
+
+  const handleBidsClick = () => {
+    setBidsCount(prev => prev + 1); // ক্লিক করলে সংখ্যা বাড়বে
+  };
 
 
 //  {
@@ -17,9 +22,12 @@ const DetailsCard = ({cards}) => {
 //   },
 
     return (
-       <div className="card  bg-base-300 w-96">
+       <div className="card  bg-base-300 w-[250px]">
   <div className="card-body">
-    <h2 className="card-title"> Task-Title: {title}</h2>
+    <h1 className=" text-secondary text-2xl font-bold"> Task-Title: {title}</h1>
+         <h2 className="flex text-primary justify-end  text-xl font-bold mb-4">
+        You bid for {bidsCount} opportunities.
+           </h2>
     <p className='font-semibold'> Category: {category}</p>
     <p className='font-semibold'> Budget: {budget}</p>
     <p className='font-semibold'> Deadline: {deadline}</p>
@@ -27,7 +35,7 @@ const DetailsCard = ({cards}) => {
     <p className='font-semibold'> Email: {email}</p>
     <p>description : {description} </p>
    <div>
-    <button className='btn btn-primary'>Contact</button>
+    <button onClick={handleBidsClick} className='btn btn-primary'>Bid</button>
    </div>
   </div>
 </div>

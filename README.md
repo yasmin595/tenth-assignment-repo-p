@@ -10,3 +10,16 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+website name is freelancer task marketplace . 
+live site url is http://localhost:5175/
+in my website i use react router, express js , mongodb, .
+In my website I use npm package like tailwind css, daisy UI, i use tootlip, swiper slider, type writer etc.
+my website is create for freelancer . 
+in my website you can post your task
+you can see other post.
+you can delete post post .
+you can update your post.
+

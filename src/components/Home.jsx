@@ -10,9 +10,9 @@ const Home = () => {
     const tasks = useLoaderData();
     console.log(tasks)
     return (
- <div className='w-11/12 mx-auto my-8'>
+ <div className='w-11/12 p-4 mx-auto my-8 bg-gray-100 dark:bg-gray-800'>
    <div><Slider></Slider></div>
-      <h1 className='font-bold text-2xl text-secondary md:flex my-4 '>Tasks </h1>
+      <h1 className='font-bold  bg-white text-2xl text-secondary md:flex my-4 '>Tasks </h1>
            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
            {
 tasks.map(task => <TaskCard key={task._id} task={task}></TaskCard>)

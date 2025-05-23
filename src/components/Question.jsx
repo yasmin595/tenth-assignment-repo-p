@@ -2,8 +2,8 @@ import React from 'react';
 
 const Question = () => {
     return (
-        <div className='w-11/12 mx-auto my-12'>
-            <h1 className='font-bold text-2xl text-secondary flex justify-center py-5 '>Your Question</h1>
+        <div className='w-11/12 mx-auto my-12 pb-8'>
+            <h1 className='font-bold bg-white text-2xl text-secondary flex justify-center py-5 '>Your Question</h1>
             <div className="collapse collapse-arrow bg-base-100 border border-base-300">
   <input type="radio" name="my-accordion-2" defaultChecked />
   <div className="collapse-title font-semibold">How do I create an account?</div>

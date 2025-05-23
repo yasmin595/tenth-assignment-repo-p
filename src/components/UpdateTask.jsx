@@ -4,6 +4,8 @@ import { useLoaderData } from 'react-router';
 
 import Swal from 'sweetalert2';
 import { AuthContext } from '../provider/AuthProvider';
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip';
 
 const UpdateTask = () => {
        const { user } = use(AuthContext);
@@ -40,9 +42,9 @@ const UpdateTask = () => {
 
      }
     return (
-       <div className='p-24'>
+       <div className='p-24  bg-gray-100 dark:bg-gray-800 '>
             <div className='p-12 text-center space-y-4'>
-                <h1 className="text-4xl font-bold text-secondary">Update Task</h1>
+                <h1 className=" text-2xl font-bold text-secondary bg-white md:p-4">Update Task</h1>
                 
             </div>
             <form onSubmit={handleUpdateTask}>
@@ -96,7 +98,14 @@ const UpdateTask = () => {
                     <input type="email" name='email' defaultValue={`${user?.email}`}  readOnly className="input w-full cursor-not-allowed" placeholder={`${user?.email}`}  />
                 </fieldset>
 
-                <input type="submit" className='btn btn-secondary btn-outline w-full' value="Updated task" />
+                <input type="submit" data-tooltip-id="updated-task-tooltip"
+          data-tooltip-content="Click to Updated Task"   className='btn btn-secondary  w-full' value="Updated task" />
+                          <Tooltip
+        id="updated-task-tooltip"
+        place="top"
+        
+        style={{ backgroundColor: '#333', color: '#fff', padding: '5px 10px', borderRadius: '4px' }}
+      />
             </form>
         </div>
     );

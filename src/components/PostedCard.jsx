@@ -45,11 +45,11 @@ const PostedCard = ({task, emailTask, setEmailTask}) => {
     }
 
     return (
-        <div className='w-11/12 mx-auto'>
+        <div className='w-9/12 mx-auto bg-white '>
 
             
-             <div className="overflow-x-auto">
-          <table className="table table-zebra w-full">
+             <div className="overflow-x-auto  ">
+          <table className="table table-zebra  ">
             <thead>
               <tr>
                 <th>Title</th>

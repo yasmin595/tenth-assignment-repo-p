@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Typewriter } from 'react-simple-typewriter';
 import 'swiper/css';
 import Image1 from '../assets/photo-1596.jpeg'
 import Image2 from '../assets/premium_photo-12.jpeg'
@@ -28,10 +29,26 @@ const Slider = () => {
 </div>
 <div className="relative container mx-auto px-4 py-16 md:py-22">
     <div className="max-w-lg">
-        <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
+            <h1 className='font-bold text-2xl text-white'>
+        We are looking for{' '}
+        <span className='font-bold text-3xl text-primary'>
+          <Typewriter
+            words={['a Developer', 'a Designer', 'a Writer']}
+            loop={true}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
+      </h1>
+        <h2 className="text-xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h2>
         <p className="text-lg mb-8">
+
            Platform a collection of rare, budget friendly, and super skills based
         </p>
+
        
     </div>
     </div>
@@ -50,7 +67,21 @@ const Slider = () => {
 </div>
 <div className="relative container mx-auto px-4 py-16 md:py-22">
     <div className="max-w-lg">
-        <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
+               <h1 className='font-bold text-2xl text-white'>
+        We are looking for{' '}
+        <span className='font-bold text-3xl text-primary'>
+          <Typewriter
+            words={['a Developer', 'a Designer', 'a Writer']}
+            loop={true}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
+      </h1>
+        <h2 className="text-xl md:text-xl font-bold mb-8">Bid on Unique Task from Around the World</h2>
         <p className="text-lg mb-8">
          Platform a collection of rare, budget friendly, and super skills based
         </p>
@@ -70,7 +101,21 @@ const Slider = () => {
 </div>
 <div className="relative container mx-auto px-4 py-16 md:py-22">
     <div className="max-w-lg">
-        <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
+               <h1 className='font-bold text-2xl text-white'>
+        We are looking for{' '}
+        <span className='font-bold text-3xl text-primary'>
+          <Typewriter
+            words={['a Developer', 'a Designer', 'a Writer']}
+            loop={true}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
+      </h1>
+        <h2 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h2>
         <p className="text-lg mb-8">
             Platform a collection of rare, budget friendly, and super skills based
         </p>
@@ -89,7 +134,21 @@ const Slider = () => {
 </div>
 <div className="relative container mx-auto px-4 py-16 md:py-22">
     <div className="max-w-lg">
-        <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
+               <h1 className='font-bold text-2xl text-white'>
+        We are looking for{' '}
+        <span className='font-bold text-3xl text-primary'>
+          <Typewriter
+            words={['a Developer', 'a Designer', 'a Writer']}
+            loop={true}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          />
+        </span>
+      </h1>
+        <h2 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h2>
         <p className="text-lg mb-8">
              Platform a collection of rare, budget friendly, and super skills based
         </p>

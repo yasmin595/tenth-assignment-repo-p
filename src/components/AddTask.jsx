@@ -2,6 +2,9 @@ import React, { use } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../provider/AuthProvider';
 
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip';
+
 const AddTask = () => {
     const { user } = use(AuthContext);
 
@@ -38,16 +41,18 @@ const AddTask = () => {
             })
     }
 
+
+
     return (
-        <div className='p-24'>
+        <div className='p-24 bg-gray-100 dark:bg-gray-800'>
             <div className='p-12 text-center space-y-4'>
-                <h1 className="text-4xl font-bold text-secondary">Add Task</h1>
+                <h1 className="text-4xl font-bold text-secondary bg-white ">Add Task</h1>
               
             </div>
             <form onSubmit={handleAddTask}>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                     <fieldset className="fieldset bg-base-300 border-base-300 rounded-box border p-4">
-                        <label className="label">Task Title</label>
+                        <label className="label ">Task Title</label>
                         <input type="text" name='title' className="input w-full" placeholder="Task Title" />
                     </fieldset>
                     <fieldset className="fieldset bg-base-300 border-base-300 rounded-box border p-4 dropdown ">
@@ -95,7 +100,14 @@ const AddTask = () => {
                     <input type="email" name='email' defaultValue={`${user.email}`}  readOnly className="input w-full cursor-not-allowed" placeholder={`${user.email}`}  />
                 </fieldset>
 
-                <input type="submit" className='btn w-full btn-outline btn-secondary' value="Add task" />
+                <input type="submit"   data-tooltip-id="add-task-tooltip"
+          data-tooltip-content="Click to Add Task" className='btn  w-full  btn-secondary' value="Add task" />
+                <Tooltip
+        id="add-task-tooltip"
+        place="top"
+        style={{ backgroundColor: '#333', color: '#fff', padding: '5px 10px', borderRadius: '4px' }}
+      />
+                   
             </form>
         </div>
     );
