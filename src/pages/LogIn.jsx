@@ -51,7 +51,9 @@ const LogIn = () => {
         setError(errorCode)
         toast.error(errorCode);
       });
+        //  navigate(`${location.state ? location.state : "/"}`)
       toast.success("Successfully log in")
+
   };
 
 

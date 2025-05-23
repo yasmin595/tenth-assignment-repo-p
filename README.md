@@ -14,7 +14,7 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 website name is freelancer task marketplace . 
-live site url is http://localhost:5175/
+live site url is  https://tenth-assignment-repo.web.app
 in my website i use react router, express js , mongodb, .
 In my website I use npm package like tailwind css, daisy UI, i use tootlip, swiper slider, type writer etc.
 my website is create for freelancer . 

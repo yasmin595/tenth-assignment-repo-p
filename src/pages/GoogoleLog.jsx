@@ -5,8 +5,12 @@ import  { useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { toast } from 'react-toastify';
 import { auth } from '../firebase/firebase.init';
+import {  useLocation, useNavigate } from 'react-router';
+// import { Navigate } from 'react-router';
 const GoogoleLog = () => {
     const [user, setUser]= useState(null);
+      const location = useLocation();
+  const navigate = useNavigate();
     const provider = new GoogleAuthProvider
 const handleGoogleSign = ()=>{
     // console.log("google sign in is clicked");
@@ -20,7 +24,9 @@ const handleGoogleSign = ()=>{
     })
 
 toast.success("You Successfully log in with your google account")
+   navigate(`${location.state ? location.state : "/"}`)
 }
+//    Navigate(`${location.state ? location.state : "/"}`)
     return (
         <div>
              <button onClick={handleGoogleSign} className="btn btn-secondary btn-outline w-full">
