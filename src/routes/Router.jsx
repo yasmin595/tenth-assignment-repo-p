@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
 
         index:true,
-         loader: () => fetch('http://localhost:3000/tasks'),
+         loader: () => fetch('http://localhost:3000/my-task'),
         Component:Home,
         hydrateFallbackElement:<Loading></Loading>,
       },

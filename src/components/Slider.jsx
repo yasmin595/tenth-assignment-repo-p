@@ -30,7 +30,7 @@ const Slider = () => {
     <div className="max-w-lg">
         <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
         <p className="text-lg mb-8">
-           Platform a collection of rare, budget friendly, and super skills
+           Platform a collection of rare, budget friendly, and super skills based
         </p>
        
     </div>
@@ -52,7 +52,7 @@ const Slider = () => {
     <div className="max-w-lg">
         <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
         <p className="text-lg mb-8">
-         Platform a collection of rare, budget friendly, and super skills
+         Platform a collection of rare, budget friendly, and super skills based
         </p>
        
     </div>
@@ -72,7 +72,7 @@ const Slider = () => {
     <div className="max-w-lg">
         <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
         <p className="text-lg mb-8">
-            Platform a collection of rare, budget friendly, and super skills
+            Platform a collection of rare, budget friendly, and super skills based
         </p>
        
     </div>
@@ -91,7 +91,7 @@ const Slider = () => {
     <div className="max-w-lg">
         <h1 className="text-3xl md:text-3xl font-bold mb-8">Bid on Unique Task from Around the World</h1>
         <p className="text-lg mb-8">
-             Platform a collection of rare, budget friendly, and super skills
+             Platform a collection of rare, budget friendly, and super skills based
         </p>
        
     </div>

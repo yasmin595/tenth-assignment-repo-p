@@ -77,7 +77,7 @@ const AddTask = () => {
                     </fieldset>
                     <fieldset className="fieldset bg-base-300 border-base-300 rounded-box border p-4">
                         <label className="label">Deadline</label>
-                        <input type="text" name='deadline' className="input w-full" placeholder="Deadline" />
+                        <input type="date" name='deadline' className="input w-full" placeholder="Deadline" />
                     </fieldset>
                     <fieldset className="fieldset bg-base-300 border-base-300 rounded-box border p-4">
                         <label className="label">Budget</label>
