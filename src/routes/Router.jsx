@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
 
         index:true,
-         loader: () => fetch('http://localhost:3000/my-task'),
+         loader: () => fetch('https://assigment-copy-gj1o.onrender.com/my-task'),
         Component:Home,
         hydrateFallbackElement:<Loading></Loading>,
       },
@@ -42,7 +42,7 @@ element:<PrivateRoute>
     
       {
           path:"browse-task",
-             loader: () => fetch('http://localhost:3000/tasks'),
+             loader: () => fetch('https://assigment-copy-gj1o.onrender.com/tasks'),
           Component:BrowseTask,
             hydrateFallbackElement:<Loading></Loading>,
 
@@ -50,7 +50,7 @@ element:<PrivateRoute>
 
       {
 path:"details/:_id",
-loader: () => fetch("http://localhost:3000/tasks"),
+loader: () => fetch("https://assigment-copy-gj1o.onrender.com/"),
 element:<PrivateRoute>
   <Details>
 </Details> 
@@ -62,7 +62,7 @@ element:<PrivateRoute>
 
       {
         path:"posted-task/:email",
-        loader: ({params})=> fetch(`http://localhost:3000/tasks/${params.email}`),
+        loader: ({params})=> fetch(`https://assigment-copy-gj1o.onrender.com/${params.email}`),
         
      element:<PrivateRoute>
      <PostedTask></PostedTask>
@@ -71,7 +71,7 @@ element:<PrivateRoute>
       },
       {
         path:"updated-task/:id",
-        loader:({params}) => fetch(`http://localhost:3000/task/${params.id}`),
+        loader:({params}) => fetch(`https://assigment-copy-gj1o.onrender.com/${params.id}`),
         
         element:<PrivateRoute>
           <UpdateTask></UpdateTask>

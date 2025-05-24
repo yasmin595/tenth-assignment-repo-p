@@ -16,7 +16,7 @@ const AddTask = () => {
         console.log(newTask);
 
         // send task data to the db
-        fetch('http://localhost:3000/tasks', {
+        fetch('https://assigment-copy-gj1o.onrender.com/tasks', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

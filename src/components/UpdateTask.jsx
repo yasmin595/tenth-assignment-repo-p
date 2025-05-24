@@ -20,7 +20,7 @@ const UpdateTask = () => {
         console.log(updatedTask);
 
         // send updated coffee to the db
-        fetch(`http://localhost:3000/task/${_id}`, {
+        fetch(`https://assigment-copy-gj1o.onrender.com/${_id}`, {
             method: 'PUT', 
             headers: {
                 'content-type': 'application/json'

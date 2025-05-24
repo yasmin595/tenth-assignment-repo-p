@@ -22,9 +22,10 @@ const handleGoogleSign = ()=>{
     .catch(error =>{
         console.log(error)
     })
+      navigate(`${location.state ? location.state : "/"}`)
 
 toast.success("You Successfully log in with your google account")
-   navigate(`${location.state ? location.state : "/"}`)
+ 
 }
 //    Navigate(`${location.state ? location.state : "/"}`)
     return (

@@ -20,7 +20,7 @@ const PostedCard = ({task, emailTask, setEmailTask}) => {
             if (result.isConfirmed) {
 
                 // start deleting the coffee
-                fetch(`http://localhost:3000/task/${_id}`, {
+                fetch(`https://assigment-copy-gj1o.onrender.com/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

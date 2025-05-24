@@ -13,7 +13,7 @@ const Footer = () => {
                         </Link>
                         <p className=" text-xs">
                             Discover and explore budget friendly <br /> skill happening in your wold. Find you work and more.
-                        </p>
+                        </p>  
                     </div>
 
                     <div>

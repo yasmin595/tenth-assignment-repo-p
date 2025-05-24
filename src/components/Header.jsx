@@ -132,7 +132,7 @@ const handleLogOut = () => {
         <img
           className="w-12 rounded-full"
           src={`${user &&  user?.photoURL}`}
-          alt=''
+          alt='image'
           onClick={()=>setShow(!show)}
         />
 

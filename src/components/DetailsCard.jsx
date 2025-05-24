@@ -6,7 +6,7 @@ const DetailsCard = ({cards}) => {
   const [bidsCount, setBidsCount] = useState(0);
 
   const handleBidsClick = () => {
-    setBidsCount(prev => prev + 1); // ক্লিক করলে সংখ্যা বাড়বে
+    setBidsCount(prev => prev + 1); 
   };
 
 

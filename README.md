@@ -15,11 +15,11 @@ If you are developing a production application, we recommend using TypeScript wi
 
 website name is freelancer task marketplace . 
 live site url is  https://tenth-assignment-repo.web.app
-in my website i use react router, express js , mongodb, .
-In my website I use npm package like tailwind css, daisy UI, i use tootlip, swiper slider, type writer etc.
+in my website i use html, css, javaScript,   react-router, express.js , mongodb,.
+In my website I use npm package like tailwind css, daisy UI, i use tootlip, swiper slider, type-writer etc.
 my website is create for freelancer . 
 in my website you can post your task
-you can see other post.
-you can delete post post .
-you can update your post.
+you can see other task .
+you can delete your task  .
+you can update your post .
 
