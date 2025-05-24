@@ -45,7 +45,7 @@ const PostedCard = ({task, emailTask, setEmailTask}) => {
     }
 
     return (
-        <div className='w-9/12 mx-auto bg-white '>
+        <div className='w-9/12 mx-auto bg-base-300 '>
 
             
              <div className="overflow-x-auto  ">
