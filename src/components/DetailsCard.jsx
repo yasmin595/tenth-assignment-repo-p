@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { toast } from 'react-toastify';
+
 
 const DetailsCard = ({cards}) => {
  const {title, _id, name, email,  category, description, deadline, budget ,  } = cards;
@@ -8,7 +8,7 @@ const DetailsCard = ({cards}) => {
 
   const handleBidsClick = () => {
     setBidsCount(prev => prev + 1); 
-    toast.success(`You bid for ${bidsCount} opportunities`)
+   
   };
 
 

@@ -17,7 +17,7 @@ const {title, category, description, deadline, budget , _id } = task
 
     return (
        <div className="card  bg-base-300 ">
-  <div className="card-body w-[150px]">
+  <div className="card-body w-[250px]">
     <h2 className="card-title text-secondary font-bold text-2xl"> Task-Title: {title}</h2>
     <p className='font-semibold'> Category: {category}</p>
     <p className='font-semibold'> Budget: {budget}</p>

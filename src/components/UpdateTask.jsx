@@ -17,7 +17,7 @@ const UpdateTask = () => {
            const form = e.target;
         const formData = new FormData(form);
         const updatedTask = Object.fromEntries(formData.entries())
-        console.log(updatedTask);
+        // console.log(updatedTask);
 
         // send updated coffee to the db
         fetch(`https://assigment-copy-gj1o.onrender.com/task/${_id}`, {

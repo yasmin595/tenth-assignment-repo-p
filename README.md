@@ -13,13 +13,44 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-website name is freelancer task marketplace . 
-live site url is  https://tenth-assignment-repo.web.app
-in my website i use html, css, javaScript,   react-router, express.js , mongodb,.
-In my website I use npm package like tailwind css, daisy UI, i use tootlip, swiper slider, type-writer etc.
-my website is create for freelancer . 
-in my website you can post your task
-you can see other task .
-you can delete your task  .
-you can update your post .
 
+
+# Freelancer Task Marketplace
+
+A modern, responsive web application where clients can post freelance tasks and freelancers can place bids. Built using React, Tailwind CSS, and Firebase, with a smooth UI and interactive features to enhance user experience.
+
+## 🔗 Live Preview
+>https://tenth-assignment-repo.web.app
+## 🚀 Features
+
+- 🔐 Firebase authentication & real-time database
+- 🔍 Browse and post freelance tasks
+- 💼 Freelancers can bid on tasks
+- 📋 View task details and bid lists
+- 🌙 Light and dark mode (customize via Tailwind)
+- 💬 Toast notifications and alerts for actions
+- 🎨 Modern UI with icons and animation
+- 📱 Fully responsive layout
+
+## 🛠️ Tech Stack
+
+| Frontend         | Libraries & Tools                 |
+|------------------|----------------------------------|
+| React 19         | Tailwind CSS 4, Swiper JS        |
+| React Router 7   | Lucide React, React Icons        |
+| Firebase         | Auth & Database                  |
+| UX Enhancements  | React Toastify, SweetAlert2      |
+| Animations       | React Simple Typewriter          |
+| Tooltips         | React Tooltip                    |
+
+ ## Folder structure example
+src/
+│
+├── assets/             # Images & icons
+├── components/         # Reusable UI components
+├── pages/              # Main page components (Home, TaskDetails, etc.)
+├── routes/             # React Router configs
+├── firebase/           # Firebase config and API functions
+├── App.jsx
+├── main.jsx
+└── index.css

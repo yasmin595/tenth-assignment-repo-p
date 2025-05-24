@@ -13,7 +13,7 @@ const AddTask = () => {
         const form = e.target;
         const formData = new FormData(form);
         const newTask = Object.fromEntries(formData.entries())
-        console.log(newTask);
+        // console.log(newTask);
 
         // send task data to the db
         fetch('https://assigment-copy-gj1o.onrender.com/tasks', {

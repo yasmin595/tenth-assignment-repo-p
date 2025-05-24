@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 const PostedCard = ({task, emailTask, setEmailTask}) => {
     const {title, _id,  category,  deadline, budget  } = task;
   const handleDelete = (_id) => {
-        console.log(_id);
+        // console.log(_id);
 
         Swal.fire({
             title: "Are you sure?",
@@ -16,7 +16,7 @@ const PostedCard = ({task, emailTask, setEmailTask}) => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-            console.log(result.isConfirmed)
+            // console.log(result.isConfirmed)
             if (result.isConfirmed) {
 
                 // start deleting the coffee
