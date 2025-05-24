@@ -50,7 +50,7 @@ element:<PrivateRoute>
 
       {
 path:"details/:_id",
-loader: () => fetch("https://assigment-copy-gj1o.onrender.com/"),
+loader: () => fetch("https://assigment-copy-gj1o.onrender.com/tasks"),
 element:<PrivateRoute>
   <Details>
 </Details> 
@@ -62,7 +62,7 @@ element:<PrivateRoute>
 
       {
         path:"posted-task/:email",
-        loader: ({params})=> fetch(`https://assigment-copy-gj1o.onrender.com/${params.email}`),
+        loader: ({params})=> fetch(`https://assigment-copy-gj1o.onrender.com/tasks/${params.email}`),
         
      element:<PrivateRoute>
      <PostedTask></PostedTask>
@@ -71,7 +71,7 @@ element:<PrivateRoute>
       },
       {
         path:"updated-task/:id",
-        loader:({params}) => fetch(`https://assigment-copy-gj1o.onrender.com/${params.id}`),
+        loader:({params}) => fetch(`https://assigment-copy-gj1o.onrender.com/task/${params.id}`),
         
         element:<PrivateRoute>
           <UpdateTask></UpdateTask>
