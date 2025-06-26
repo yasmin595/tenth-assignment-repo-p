@@ -41,7 +41,7 @@ const handleLogOut = () => {
 
 
     return (
-        <div className='bg-gray-100 dark:bg-gray-800 '>
+        <div className='bg-gray-100 sticky top-0 z-50 dark:bg-gray-800'>
          
             <div className=" px-2 lg:px-4 navbar bg-base-100 mx-auto shadow-sm">
   <div className="navbar-start">
