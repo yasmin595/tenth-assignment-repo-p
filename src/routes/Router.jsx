@@ -14,6 +14,10 @@ import Loading from '../pages/Loading';
 import Details from '../pages/details';
 import UpdateTask from '../components/UpdateTask';
 import ErrorPage from '../pages/ErrorPage';
+import DashBoard from '../pages/DashBoard';
+import ExtraLayout from '../layout/ExtraLayout';
+import AllTask from '../pages/AllTask';
+import AboutUs from '../pages/AboutUs';
 
 
 
@@ -28,29 +32,62 @@ const router = createBrowserRouter([
       {
 
         index:true,
-         loader: () => fetch('https://assigment-copy-gj1o.onrender.com/my-task'),
+         loader: () => fetch('https://tenth-assignment-repo.vercel.app/my-task'),
         Component:Home,
         hydrateFallbackElement:<Loading></Loading>,
       },
+
+    
+      {
+          path:"browse-task",
+             loader: () => fetch('https://tenth-assignment-repo.vercel.app/tasks'),
+          Component:BrowseTask,
+            hydrateFallbackElement:<Loading></Loading>,
+
+      },
+      {
+          path:"about",
+         
+          Component:AboutUs,
+            hydrateFallbackElement:<Loading></Loading>,
+
+      },
+
+
+
+       
+     
+     ]
+     
+  },
+    {
+    path:"/",
+    element:<ExtraLayout></ExtraLayout>,
+    children:[
+
+      {
+     path:"dashboard",
+     element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>
+      },
        {
+          path:"allTask",
+             loader: () => fetch('https://tenth-assignment-repo.vercel.app/tasks'),
+              element:<PrivateRoute><AllTask></AllTask></PrivateRoute>,
+            hydrateFallbackElement:<Loading></Loading>,
+
+      },
+     
+      
+             {
 path:"add-task",
 element:<PrivateRoute>
   <AddTask></AddTask>
 </PrivateRoute>,
 
       },
-    
-      {
-          path:"browse-task",
-             loader: () => fetch('https://assigment-copy-gj1o.onrender.com/tasks'),
-          Component:BrowseTask,
-            hydrateFallbackElement:<Loading></Loading>,
-
-      },
-
-      {
+            {
 path:"details/:_id",
-loader: () => fetch("https://assigment-copy-gj1o.onrender.com/tasks"),
+loader: () => fetch("https://tenth-assignment-repo.vercel.app/tasks"),
 element:<PrivateRoute>
   <Details>
 </Details> 
@@ -59,30 +96,29 @@ element:<PrivateRoute>
       hydrateFallbackElement:<Loading></Loading>,
 
       },
-
-      {
+        {
         path:"posted-task/:email",
-        loader: ({params})=> fetch(`https://assigment-copy-gj1o.onrender.com/tasks/${params.email}`),
+        loader: ({params})=> fetch(`https://tenth-assignment-repo.vercel.app/tasks/${params.email}`),
         
      element:<PrivateRoute>
      <PostedTask></PostedTask>
      </PrivateRoute>,
        hydrateFallbackElement:<Loading></Loading>
       },
+      
+    
       {
         path:"updated-task/:id",
-        loader:({params}) => fetch(`https://assigment-copy-gj1o.onrender.com/task/${params.id}`),
+        loader:({params}) => fetch(`https://tenth-assignment-repo.vercel.app/task/${params.id}`),
         
         element:<PrivateRoute>
           <UpdateTask></UpdateTask>
         </PrivateRoute>,
          hydrateFallbackElement:<Loading></Loading>,       
       },
-       
-     
-     ]
-     
-  },
+    ]
+  }
+  ,
   {
 path:"/auth",
 Component:AuthLayout,
@@ -100,6 +136,7 @@ children:[
 ]
 
   },
+
     {
       path:'/*',
       element:<ErrorPage></ErrorPage>

@@ -9,7 +9,7 @@ const Footer = () => {
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center gap-2">
                             <Calendar className="h-6 w-6" />
-                            <span className="text-xl font-bold text-secondary">Freelancer Market Place </span>
+                            <span className="text-xl font-bold text-blue-800">Freelancer Market Place </span>
                         </Link>
                         <p className=" text-xs">
                             Discover and explore budget friendly <br /> skill happening in your wold. Find you work and more.
@@ -17,25 +17,25 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h3 className="font-medium text-lg mb-4 text-secondary">Quick Links</h3>
+                        <h3 className="font-medium text-lg mb-4 text-blue-800">Quick Links</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link to='/' className="text-muted-foreground hover:text-foreground text-sm">
+                                <Link to='/' className="text-muted-foreground hover:text-blue-800 text-sm">
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/my-profile' className="text-muted-foreground hover:text-foreground text-sm">
+                                <Link to='/my-profile' className="text-muted-foreground hover:text-blue-800 text-sm">
                                    Add Task
                                 </Link>
                             </li>
                             <li>
-                                <Link  className="text-muted-foreground hover:text-foreground text-sm">
+                                <Link  className="text-muted-foreground hover:text-blue-800 text-sm">
                                    Browse Task
                                 </Link>
                             </li>
                             <li>
-                                <Link  className="text-muted-foreground hover:text-foreground text-sm">
+                                <Link  className="text-muted-foreground hover:text-blue-800 text-sm">
                                    My Posted Task
                                 </Link>
                             </li>
@@ -43,20 +43,20 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h3 className="font-medium text-lg mb-4 text-secondary">Legal</h3>
+                        <h3 className="font-medium text-lg mb-4 text-blue-800">Legal</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/terms" className="text-muted-foreground hover:text-foreground text-sm">
+                                <Link href="/terms" className="text-muted-foreground hover:text-blue-800 text-sm">
                                     Terms & Conditions
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/privacy" className="text-muted-foreground hover:text-foreground text-sm">
+                                <Link href="/privacy" className="text-muted-foreground hover:text-blue-800 text-sm">
                                     Privacy Policy
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/cookies" className="text-muted-foreground hover:text-foreground text-sm">
+                                <Link href="/cookies" className="text-muted-foreground hover:text-blue-800 text-sm">
                                     Cookie Policy
                                 </Link>
                             </li>
@@ -64,13 +64,13 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h3 className="font-medium text-lg mb-4 text-secondary">Connect With Us</h3>
+                        <h3 className="font-medium text-lg mb-4 text-blue-800">Connect With Us</h3>
                         <div className="flex space-x-4">
                             <a
                                 href="https://twitter.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-foreground"
+                                className="text-muted-foreground hover:text-blue-800"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ const Footer = () => {
                                 href="https://facebook.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-foreground"
+                                className="text-muted-foreground hover:text-blue-800"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ const Footer = () => {
                                 href="https://instagram.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-muted-foreground hover:text-foreground"
+                                className="text-muted-foreground hover:text-blue-800"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

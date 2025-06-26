@@ -62,7 +62,7 @@ const LogIn = () => {
   return (
     <div className="flex justify-center min-h-screen items-center">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
-        <h2 className="font-semibold text-2xl text-center">
+        <h2 className="font-semibold text-2xl text-center text-blue-800">
           Login your account
         </h2>
         <form onSubmit={handleLogin} className="card-body">
@@ -102,13 +102,13 @@ const LogIn = () => {
 
             {error && <p className="text-red-400 text-xs">{error}</p>}
 
-            <button type="submit" className="btn btn-outline mt-4 btn-secondary ">
+            <button type="submit" className="btn  hover:bg-blue-800 hover:text-white bg-white  border-blue-800  text-blue-800 mt-4 ">
               Login
             </button>
            <GoogoleLog></GoogoleLog>
             <p className="font-semibold text-center pt-5">
               Don't Have An Account ?{" "}
-              <Link  to = "/auth/sign-up" className="text-secondary" >
+              <Link  to = "/auth/sign-up" className="text-blue-800" >
                 Register
               </Link>
             </p>

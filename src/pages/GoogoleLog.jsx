@@ -23,6 +23,7 @@ const handleGoogleSign = ()=>{
         console.log(error)
     })
       navigate(`${location.state ? location.state : "/"}`)
+      
 
 toast.success("You Successfully log in with your google account")
  
@@ -30,7 +31,7 @@ toast.success("You Successfully log in with your google account")
 //    Navigate(`${location.state ? location.state : "/"}`)
     return (
         <div>
-             <button onClick={handleGoogleSign} className="btn btn-secondary btn-outline w-full">
+             <button onClick={handleGoogleSign} className="btn  hover:bg-blue-800 hover:text-white bg-white  border-blue-800  text-blue-800 w-full">
                       <FcGoogle size={24} /> Login with Google
                     </button>
         </div>

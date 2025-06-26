@@ -52,13 +52,19 @@ const handleLogOut = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><NavLink  className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to='/'>Home</NavLink></li>
-        <li>
-      <NavLink  className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to='/add-task'> Add Task</NavLink>
-        </li>
-        <li><NavLink  className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to="/browse-task">Browse Task</NavLink></li>
-        <li><NavLink  className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to={`/posted-task/${user?.email}`}>My Posted Task</NavLink></li>
+        <li><NavLink  className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to='/'>Home</NavLink></li>
+        {/* <li>
+      <NavLink  className={({isActive})=>isActive? ' text-blue-800-800 underline font-semibold':''} to='/add-task'> Add Task</NavLink>
+        </li> */}
+        <li><NavLink  className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to="/browse-task">Browse Task</NavLink></li>
+
         
+        <li><NavLink  className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink  className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to="/about">About Us</NavLink></li>
+
+       
+        {/* <li><NavLink  className={({isActive})=>isActive? ' text-blue-800-800 underline font-semibold':''} to={`/posted-task/${user?.email}`}>My Posted Task</NavLink></li> */}
+         
         <div>
                <li>  
           
@@ -86,14 +92,14 @@ const handleLogOut = () => {
          
             <p>{user?.email}</p>
 
-            <button  onClick={handleLogOut} className='btn btn-secondary btn-outline' >Log Out</button>
+            <button  onClick={handleLogOut} className='btn hover:bg-blue-800 hover:text-white bg-white border-blue-800  text-blue-800' >Log Out</button>
             </div>
           )
         }
       {user ? (
        ' '
         ) : (
-          <Link to="/auth/login" className="btn  btn-secondary btn-outline px-4 ">
+          <Link to="/auth/login" className="btn  hover:bg-blue-800 hover:text-white bg-white border-blue-800  text-blue-800 px-4 ">
             Login
           </Link>
         )}
@@ -101,23 +107,27 @@ const handleLogOut = () => {
     user ? (
       ' '
     ):(
-       <Link to="/auth/sign-up" className="btn btn-secondary btn-outline">Sign Up</Link>
+       <Link to="/auth/sign-up" className="btn hover:bg-blue-800 hover:text-white bg-white border-blue-800  text-blue-800">Sign Up</Link>
     )
    }
   </div>
 </li>
       </ul>
     </div>
-    <a className=" text-secondary font-bold text-2xl">Freelance Task <br /> Marketplace</a>
+    <a className="  text-blue-800 font-bold text-2xl">Freelance Task <br /> Marketplace</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-     <li><NavLink   className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to='/'>Home</NavLink></li>
-        <li>
-     <NavLink  className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to='/add-task'> Add Task</NavLink>
-        </li>
-        <li><NavLink  className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to="/browse-task">Browse Task</NavLink></li>
-        <li><NavLink  className={({isActive})=>isActive? 'text-secondary underline font-semibold':''} to={`/posted-task/${user?.email}`}>My Posted Task</NavLink></li>
+     <li><NavLink   className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to='/'>Home</NavLink></li>
+        {/* <li>
+     <NavLink  className={({isActive})=>isActive? ' text-blue-800-800 underline font-semibold':''} to='/add-task'> Add Task</NavLink>
+        </li> */}
+        <li><NavLink  className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to="/browse-task">Browse Task</NavLink></li>
+        {/* <li><NavLink  className={({isActive})=>isActive? ' text-blue-800-800 underline font-semibold':''} to={`/posted-task/${user?.email}`}>My Posted Task</NavLink></li> */}
+
+        <li><NavLink  className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to="/dashboard">Dashboard</NavLink></li>
+
+         <li><NavLink  className={({isActive})=>isActive? ' text-blue-800 underline font-semibold':''} to="/about">About Us</NavLink></li>
 
         <li>  
           
@@ -132,7 +142,7 @@ const handleLogOut = () => {
         <img
           className="w-12 rounded-full"
           src={`${user &&  user?.photoURL}`}
-          alt='image'
+          alt=''
           onClick={()=>setShow(!show)}
         />
 
@@ -144,14 +154,14 @@ const handleLogOut = () => {
          
             <p>{user?.email}</p>
 
-            <button  onClick={handleLogOut} className='btn btn-secondary btn-outline' >Log Out</button>
+            <button  onClick={handleLogOut} className='btn hover:bg-blue-800 hover:text-white bg-white border-blue-800  text-blue-800' >Log Out</button>
             </div>
           )
         }
       {user ? (
        ' '
         ) : (
-          <Link to="/auth/login" className="btn  btn-secondary btn-outline px-4 ">
+          <Link to="/auth/login" className="btn  hover:bg-blue-800 hover:text-white bg-white border-blue-800  text-blue-800 px-4 ">
             Login
           </Link>
         )}
@@ -159,7 +169,7 @@ const handleLogOut = () => {
     user ? (
       ' '
     ):(
-       <Link to="/auth/sign-up" className="btn btn-secondary btn-outline">Sign Up</Link>
+       <Link to="/auth/sign-up" className="btn hover:bg-blue-800 hover:text-white bg-white  border-blue-800  text-blue-800">Sign Up</Link>
     )
    }
   </div></li>

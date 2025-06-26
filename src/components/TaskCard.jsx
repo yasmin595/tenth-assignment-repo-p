@@ -1,34 +1,39 @@
 import React from 'react';
+import { MdOutlineAccessTime, MdAttachMoney } from "react-icons/md";
+import { FaTag } from "react-icons/fa";
 
-const TaskCard = ({task}) => {
-const {title, category, description, deadline, budget ,  } = task
+const TaskCard = ({ task }) => {
+  const { title, category, description, deadline, budget } = task;
 
-//  {
-//     "_id": "682dfa2347da1f9bdd28f345",
-//     "title": "design",
-//     "category": "Design",
-//     "description": "design from heart",
-//     "deadline": "31may 2025",
-//     "budget": "200000",
-//     "name": "rifat",
-//     "email": "mdrifatnicevedio202@gmail.com"
-//   },
+  return (
+    <div className="w-11/12  mx-auto bg-white  rounded-xl shadow-lg p-6 my-6 transition hover:shadow-2xl">
+      <h2 className="text-center text-2xl font-bold text-blue-800 mb-4">
+        Task Title: <span className="text-yellow-500">{title}</span>
+      </h2>
 
-    return (
-       <div className="card  bg-base-300 w-11/12">
-     
-  <div className="card-body">
-    <h2 className="card-title font-bold text-2xl text-secondary flex flex-col justify-center text-center"> Task-Title: {title}</h2>
-    <div className='flex flex-col justify-center text-center'>
-      <p className='font-semibold'> Category: {category}</p>
-    <p className='font-semibold'> Budget: {budget}</p>
-    <p className='font-semibold'> Deadline: {deadline}</p>
-    <p>description : {description} </p>
+      <div className="space-y-3 text-blue-800 text-sm md:text-base">
+        <p className="flex items-center gap-2">
+          <FaTag className="text-yellow-500" />
+          <span className="font-semibold">Category:</span> {category}
+        </p>
+
+        <p className="flex items-center gap-2">
+          <MdAttachMoney className="text-yellow-500" />
+          <span className="font-semibold">Budget:</span>  {budget}
+        </p>
+
+        <p className="flex items-center gap-2">
+          <MdOutlineAccessTime className="text-yellow-500" />
+          <span className="font-semibold">Deadline:</span> {deadline}
+        </p>
+
+        <p>
+          <span className="font-semibold">Description:</span>{' '}
+          <span className="text-gray-700">{description}</span>
+        </p>
+      </div>
     </div>
-   
-  </div>
-</div>
-    );
+  );
 };
 
 export default TaskCard;

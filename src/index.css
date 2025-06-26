@@ -6,11 +6,11 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 
-@plugin "daisyui/theme" {
+/* @plugin "daisyui/theme" {
   
   default: true;
   --color-primary: #E3B577;
   --color-secondary:#331A15;
   --color-base-200:#5C5B5B;
   --color-base-300:#ECEAE3;
-}
+} */
