@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from 'react-icons/fa6';
+import image from '../assets/authImage.png';
 
 // import { sendPasswordResetEmail } from "firebase/auth";
 
@@ -61,6 +62,11 @@ const LogIn = () => {
 
   return (
     <div className="flex justify-center min-h-screen items-center">
+
+<div>
+  <img src={image} alt="" />
+</div>
+
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
         <h2 className="font-semibold text-2xl text-center text-blue-800">
           Login your account
