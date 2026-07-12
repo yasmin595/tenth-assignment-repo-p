@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
 
         index:true,
-         loader: () => fetch('https://tenth-assignment-repo.vercel.app/my-task'),
+         loader: () => fetch('https://tenth-assignment-repo.vercel.app/my-task').then(res => res.ok ? res.json() : []),
         Component:Home,
         hydrateFallbackElement:<Loading></Loading>,
       },
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     
       {
           path:"browse-task",
-             loader: () => fetch('https://tenth-assignment-repo.vercel.app/tasks'),
+             loader: () => fetch('https://tenth-assignment-repo.vercel.app/tasks').then(res => res.ok ? res.json() : []),
           Component:BrowseTask,
             hydrateFallbackElement:<Loading></Loading>,
 
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
       },
        {
           path:"allTask",
-             loader: () => fetch('https://tenth-assignment-repo.vercel.app/tasks'),
+             loader: () => fetch('https://tenth-assignment-repo.vercel.app/tasks').then(res => res.ok ? res.json() : []),
               element:<PrivateRoute><AllTask></AllTask></PrivateRoute>,
             hydrateFallbackElement:<Loading></Loading>,
 
@@ -87,7 +87,7 @@ element:<PrivateRoute>
       },
             {
 path:"details/:_id",
-loader: () => fetch("https://tenth-assignment-repo.vercel.app/tasks"),
+loader: () => fetch("https://tenth-assignment-repo.vercel.app/tasks").then(res => res.ok ? res.json() : []),
 element:<PrivateRoute>
   <Details>
 </Details> 
@@ -98,7 +98,7 @@ element:<PrivateRoute>
       },
         {
         path:"posted-task/:email",
-        loader: ({params})=> fetch(`https://tenth-assignment-repo.vercel.app/tasks/${params.email}`),
+        loader: ({params})=> fetch(`https://tenth-assignment-repo.vercel.app/tasks/${params.email}`).then(res => res.ok ? res.json() : []),
         
      element:<PrivateRoute>
      <PostedTask></PostedTask>
@@ -109,7 +109,7 @@ element:<PrivateRoute>
     
       {
         path:"updated-task/:id",
-        loader:({params}) => fetch(`https://tenth-assignment-repo.vercel.app/task/${params.id}`),
+        loader:({params}) => fetch(`https://tenth-assignment-repo.vercel.app/task/${params.id}`).then(res => res.ok ? res.json() : {}),
         
         element:<PrivateRoute>
           <UpdateTask></UpdateTask>

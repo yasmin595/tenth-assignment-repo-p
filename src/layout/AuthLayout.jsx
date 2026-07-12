@@ -6,11 +6,11 @@ import { Outlet } from 'react-router';
 const AuthLayout = () => {
     return (
         <div>
-              <header className="w-11/12 mx-auto py-4">
+              <header className=" py-4">
             <Header
             ></Header>
           </header>
-          <main className="w-11/12 mx-auto py-5">
+          <main className="w-11/12 min-h-screen mx-auto py-5">
             <Outlet></Outlet>
           </main>
           <footer>
