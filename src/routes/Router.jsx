@@ -11,7 +11,7 @@ import LogIn from '../pages/LogIn';
 import SignUp from '../pages/SignUp';
 import PrivateRoute from '../provider/PrivateRoute';
 import Loading from '../pages/Loading';
-import Details from '../pages/details';
+import Details from '../pages/Details';
 import UpdateTask from '../components/UpdateTask';
 import ErrorPage from '../pages/ErrorPage';
 import DashBoard from '../pages/DashBoard';
@@ -89,8 +89,7 @@ element:<PrivateRoute>
 path:"details/:_id",
 loader: () => fetch("https://tenth-assignment-repo.vercel.app/tasks").then(res => res.ok ? res.json() : []),
 element:<PrivateRoute>
-  <Details>
-</Details> 
+  <Details></Details>
 </PrivateRoute> ,
 
       hydrateFallbackElement:<Loading></Loading>,
